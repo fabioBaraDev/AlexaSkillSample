@@ -1,0 +1,181 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "aplicativo bara",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "DayIntent",
+          "slots": [
+            {
+              "name": "dia",
+              "type": "AMAZON.Ordinal",
+              "samples": [
+                "{dia}"
+              ]
+            }
+          ],
+          "samples": [
+            "Nasci no dia {dia}"
+          ]
+        },
+        {
+          "name": "MonthIntent",
+          "slots": [
+            {
+              "name": "mes",
+              "type": "AMAZON.Month",
+              "samples": [
+                "{mes}"
+              ]
+            }
+          ],
+          "samples": [
+            "Nasci no mês {mes}"
+          ]
+        },
+        {
+          "name": "YearIntent",
+          "slots": [
+            {
+              "name": "ano",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "samples": [
+                "{ano}"
+              ]
+            }
+          ],
+          "samples": [
+            "Nasci no ano de {ano}"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "YearIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "ano",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.42083777321.332376346203"
+              }
+            }
+          ]
+        },
+        {
+          "name": "MonthIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "mes",
+              "type": "AMAZON.Month",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1291446442834.1531189042091"
+              }
+            }
+          ]
+        },
+        {
+          "name": "DayIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "dia",
+              "type": "AMAZON.Ordinal",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1266412190193.1105285997368"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1349370947894.1147191975780",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "em qual dia você nasceu?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1349370947894.1486142015406",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "em qual mês você nasceu"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1349370947894.591929202552",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Em qual ano você nasceu?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.42083777321.332376346203",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "qual é o ano mesmo?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1291446442834.1531189042091",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual é o mês mesmo?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1266412190193.1105285997368",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual é o dia mesmo?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "9"
+}
